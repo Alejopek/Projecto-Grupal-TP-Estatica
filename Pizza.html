@@ -6,26 +6,31 @@
     <title>Pizza pedido</title>
 </head>
 <body>
-    <img src="img/Pizza.jpg" width="350" height="300">
+<form> 
+ <div class="informacionpizza">   
+<img src="img/Pizza.jpg" width="350" height="300">
 <h2>Pizza</h2>
 <p>Pizza hecha con masa casera recien salida del horno</p>
 <h3>Cuantas pizzas desea ordenar</h3>
 <input type="number" min="0" max="30" id="Pizza" name="cantidad">
+ </div>
 
 
+<div class="opcionespizza">
 <h3>Elige el tipo de pizza</h3>
-
 <select id="Eleccion" name="Sabor">
 <option value="mozzarella">Mozzarella</option>
-<option value="apolitana">Napolitana</option>
+<option value="napolitana">Napolitana</option>
 <option value="especial">Especial</option>
 <option value="choclo">Choclo</option>
-
 </select> <br> <br>
+</div>
 
-<input type="submit" value="Realizar pedido" name="Pedidorealizado">
-<input type="reset" value="Cancelar pedido" name="Pedidocancelado">
-
+<div class="botonespizza">
+<input type="submit" name="Pedidorealizado" value="Realizar pedido">
+<input type="reset" name="Pedidocancelado"  value="Cancelar pedido">
+</div>
+</form>
 
 </body>
 </html>

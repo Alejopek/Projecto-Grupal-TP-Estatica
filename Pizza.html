@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza pedido</title>
-</head>
-<body>
-<form> 
-<div class="informacionpizza">   
-<img src="img/Pizza.jpg" width="350" height="300">
-<h2>Pizza</h2>
-<p>Pizza hecha con masa casera recien salida del horno</p>
-<h3>Cuantas pizzas desea ordenar</h3>
-<input type="number" min="0" max="30" id="Pizza" name="cantidad">
-</div>
+  </head>
+  <body>
+    <form>
+      <div class="informacionpizza">
+        <img src="img/Pizza.jpg" width="350" height="300" />
+        <h2>Pizza</h2>
+        <p>Pizza hecha con masa casera recien salida del horno</p>
+        <h3>Cuantas pizzas desea ordenar</h3>
+        <input type="number" min="0" max="30" id="Pizza" name="cantidad" />
+      </div>
 
+      <div class="opcionespizza">
+        <h3>Elige el tipo de pizza</h3>
+        <select id="Eleccion" name="Sabor">
+          <option value="mozzarella">Mozzarella</option>
+          <option value="napolitana">Napolitana</option>
+          <option value="especial">Especial</option>
+          <option value="choclo">Choclo</option>
+        </select>
+        <br />
+      </div>
 
-<div class="opcionespizza">
-<h3>Elige el tipo de pizza</h3>
-<select id="Eleccion" name="Sabor">
-<option value="mozzarella">Mozzarella</option>
-<option value="napolitana">Napolitana</option>
-<option value="especial">Especial</option>
-<option value="choclo">Choclo</option>
-</select> <br> <br>
-</div>
+      <div class="metodopagopizza">
+        <h3>Elige el metodo de pago</h3>
+        <input type="radio" id="Efectivo" name="metodopago" />
+        <label for="Efectivo">Efectivo</label>
+        <input type="radio" id="Mp" name="metodopago" />
+        <label for="Mp">Mercado pago</label> <br />
+        <br />
+      </div>
 
-<div class="botonespizza">
-<input type="submit" name="Pedidorealizado" value="Realizar pedido">
-<input type="reset" name="Pedidocancelado"  value="Cancelar pedido">
-</div>
-</form>
-
-</body>
+      <div class="botonespizza">
+        <input type="submit" name="Pedidorealizado" value="Realizar pedido" />
+        <input type="reset" name="Pedidocancelado" value="Cancelar pedido" />
+      </div>
+    </form>
+  </body>
 </html>

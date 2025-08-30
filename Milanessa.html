@@ -16,8 +16,11 @@
       </p>
       </div>
       
+      <h3>Elige cuantas Milanesas dea ordenar</h3>
+      <input type="number" min="0" max="15" id="Cant" name="Cantidad">
+
       <div class="Dejar O Sacar">
-        <h3>Dejar o Sacar</h3>
+      <h3>Dejar o Sacar</h3>
       <input type="checkbox" name="Sacar" value="Aderezo" id="sacar" checked />
       <label for="sacar">Aderezos</label><br />
 
@@ -56,8 +59,16 @@
       <label for="Quilmes">Quilmes</label><br />
      </div>
 
+     <div class="metodopamilanesa">
+      <h3>Elige el metodo de pago</h3>
+      <input type="radio" id="Efectivo" name="metodopago">
+      <label for="Efectivo">Efectivo</label>
+      <input type="radio"id="Mp" name="metodopago"> 
+      <label for="Mp">Mercado pago</label>  <br> <br>
+    </div>
+
       <div class="botoMilanesa">
-      <input type="submit" name="Pedidorealizado" value="Realizar pedido">
+      <input type="submit" name="Pedidorealizado" value="Realizar pedido De 10.500">
       <input type="reset" name="Pedidocancelado"  value="Cancelar pedido">
       </div>
     </form>

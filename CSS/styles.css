@@ -51,3 +51,9 @@ nav a {
   margin-bottom: 20px;
   font-family: "Arial Black", sans-serif;
 }
+
+.contacto {
+  background-color: rgb(11, 11, 11);
+  color: white;
+  border-top: #b28d16 2px solid;
+}

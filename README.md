@@ -2,7 +2,7 @@
 
 ## Proyecto: Rotisería Pipa
 
-Página web para una rotisería llamada Pipa, donde se ofrece una variedad de productos y se prioriza la experiencia del usuario
+Página web para una rotisería llamada Pipa, donde se ofrece una variedad de productos y se prioriza la experiencia del consumidor
 
 ### Funcionalidades
 
@@ -15,24 +15,22 @@ Página web para una rotisería llamada Pipa, donde se ofrece una variedad de pr
 
 - `index.html`: Página principal
 - `Milanessa.html`, `Hamburguepizza.html`, `Empanadas.html`, `Lomito.html`, `Sorrentinos.html`, `Bebida.html`: Páginas de productos
-- `CSS/styles.css`: Estilos de la web
-- `img/`: Imágenes de productos y logo
+- `styles.css`: Estilos de la web
+- `img`: Imágenes de productos y logo
 
 ### Cómo usar
 
 1. Descarga el repositorio
-2. Abre `index.html` en tu navegador
+2. Abre `index.html` en navegador
 3. Navega entre las secciones y productos usando el menú
-
-### Captura de pantalla
 
 ![Rotisería Pipa](img/logo.png)
 
 ### Tecnologias
 
-**HTML**
-**CSS**
-**Proximamente JavaScript**
+- **HTML**
+- **CSS**
+- **Proximamente JavaScript**
 
 ### Autores
 

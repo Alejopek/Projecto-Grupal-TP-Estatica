@@ -27,9 +27,10 @@
   margin-bottom: 16px;
 }
 
-.precio-caja {
+.opciones-caja {
   flex: 1;
-  background: #fff;
+  background: #313131;
+  color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 24px;

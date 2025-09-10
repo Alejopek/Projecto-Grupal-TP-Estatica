@@ -1,81 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form action="">
-      <div>
-      <img src="img/photo.jpg" width="350" height="350" />
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamburguepizza</title>
+  <link rel="stylesheet" href="CSS/Producto.css">
+</head>
+
+<body>
+  <div class="producto-info">
+    <div class="milanesa-caja">
+      <img src="img/photo-Photoroom.png" width="350" height="350" alt="Hamburguepizza" />
       <h2>Hamburguepizza</h2>
       <p>
-        Hamburguepizza, viene con carne casera pizza casera al horno, viene con
-        una bebida de una coca mediana Con opccion de agregar algun
-        compartimento
+        Hamburguesa con base de pizza, incluye papas, aceitunas, peperoni, jamón y morrón.
       </p>
+    </div>
 
-      <h3>Precio c/u: $12000</h3>
+    <div class="opciones-caja">
+      <form action="">
+        <h3>Precio c/u: $12000</h3>
+        <h3>Elige cuantas Hamburguepizza desea ordenar</h3>
+        <input type="number" min="0" max="5" id="Cant" name="Cantidad">
 
-      <h3>Elige cuantas Hamburguepizza dea ordenar</h3>
-      <input type="number" min="0" max="5" id="Cant" name="Cantidad">
-      </div>
+        <h3>Dejar o Sacar</h3>
+        <input type="checkbox" name="SacarAceitunas" value="Aceitunas" id="aceitunas" checked />
+        <label for="aceitunas">Aceitunas</label><br />
 
-      <div>
-      <h2>Sacar o Dejar</h2>
-      <input type="checkbox" name="Sacar" value="Aderezo" id="sacar" checked />
-      <label for="sacar">Aceitunas</label><br />
+        <input type="checkbox" name="SacarPeperoni" value="Peperoni" id="peperoni" checked />
+        <label for="peperoni">Peperoni</label><br />
 
-      <input type="checkbox" name="Sacar" value="huevo" id="sacar" checked />
-      <label for="sacar">Peperoni</label><br />
+        <input type="checkbox" name="SacarJamon" value="Jamon" id="jamon" checked />
+        <label for="jamon">Jamón</label><br />
 
-      <input type="checkbox" name="Sacar" value="Papas" id="sacar" checked />
-      <label for="sacar">Jamon</label><br />
+        <input type="checkbox" name="SacarMorron" value="Morron" id="morron" checked />
+        <label for="morron">Morrón</label><br />
 
-      <input type="checkbox" name="Sacar" value="Papas" id="sacar" checked />
-      <label for="sacar">Morron</label><br />
-      </div>
+        <h3>Que tamaño desea su pedido</h3>
+        <input type="radio" name="tamano" value="Chico" id="chico" />
+        <label for="chico">Chico</label><br />
 
-      <div>
-      <h3>Que tamaño desea su pedido</h3>
-      <input type="radio" name="Sacar" value="tamaño" id="elegir" />
-      <label for="elegir">Chica</label><br />
+        <input type="radio" name="tamano" value="Mediana" id="mediana" />
+        <label for="mediana">Mediana</label><br />
 
-      <input type="radio" name="Sacar" value="tamaño" id="elegir" />
-      <label for="elegir">Mediana</label><br />
+        <input type="radio" name="tamano" value="Grande" id="grande" />
+        <label for="grande">Grande</label><br />
 
-      <input type="radio" name="Sacar" value="tamaño" id="elegir" />
-      <label for="elegir">Grande</label><br />
-      </div>
+        <h3>Elija la Bebida</h3>
+        <input type="radio" name="bebida" value="Coca" id="coca" />
+        <label for="coca">Coca</label><br />
 
-      <div>
-      <h3>Elija la Bebida</h3>
-      <input type="radio" name="Sacar" value="bebida" id="elegir" />
-      <label for="elegir">Coca</label><br />
+        <input type="radio" name="bebida" value="Pepsi" id="pepsi" />
+        <label for="pepsi">Pepsi</label><br />
 
-      <input type="radio" name="Sacar" value="bebida" id="elegir" />
-      <label for="elegir">Pepsi</label><br />
+        <input type="radio" name="bebida" value="Sprite" id="sprite" />
+        <label for="sprite">Sprite</label><br />
 
-      <input type="radio" name="Sacar" value="bebida" id="elegir" />
-      <label for="elegir">Sprite</label><br />
+        <input type="radio" name="bebida" value="Fanta" id="fanta" />
+        <label for="fanta">Fanta</label><br />
 
-      <input type="radio" name="Sacar" value="bebida" id="elegir" />
-      <label for="elegir">Fanta</label><br />
-      </div>
+        <h3>Elige el método de pago</h3>
+        <input type="radio" id="Efectivo" name="metodopago" value="Efectivo">
+        <label for="Efectivo">Efectivo</label>
+        <input type="radio" id="Mp" name="metodopago" value="MercadoPago">
+        <label for="Mp">Mercado pago</label> <br> <br>
 
-      <div class="metodopagoHambupizza">
-      <h3>Elige el metodo de pago</h3>
-      <input type="radio" id="Efectivo" name="metodopago">
-      <label for="Efectivo">Efectivo</label>
-      <input type="radio"id="Mp" name="metodopago"> 
-      <label for="Mp">Mercado pago</label>  <br> <br>
-      </div>
-
-      <div class="botoHambupizza">
-      <input type="submit" name="Pedidorealizado" value="Realizar pedido de">
-      <input type="reset" name="Pedidocancelado"  value="Cancelar pedido">
-      </div>
-    </form>
-  </body>
+        <input type="submit" name="Pedidorealizado" value="Realizar pedido">
+        <input type="reset" name="Pedidocancelado" value="Cancelar pedido">
+      </form>
+    </div>
+  </div>
+</body>
 </html>

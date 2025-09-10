@@ -1,86 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebidas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bebidas</title>
+  <link rel="stylesheet" href="CSS/Producto.css">
 </head>
+
 <body>
-    <form action="">
-    <div>
-      <img src="img/unnamed-Photoroom.png" width="350" height="350">
-     <h2>Sector de bebidas</h2>
-     <p>Bebidas, tenemos para ofrecer a su consumo bebidas alcholicas como no alcholicas tales como:
+  <div class="producto-info">
+    <div class="milanesa-caja">
+      <img src="img/unnamed-Photoroom.png" width="350" height="350" alt="Bebidas" />
+      <h2>Sector de bebidas</h2>
+      <p>
+        Bebidas, tenemos para ofrecer a su consumo bebidas alcohólicas como no alcohólicas tales como: Coca Cola, Pepsi, Sprite, Fanta, Quilmes y más.
       </p>
     </div>
 
-    <div>
-        <h2>Bebidas en botella</h2>
-        <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Coca">Coca</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Pepsi">Pepsi</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Fanta">Fanta</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Sprite">Sprite</label>
-      <input type="checkbox" id="Ninguna" name="Ninguna">
-      <label for="Ninguna">Ninguna</label>
+    <div class="opciones-caja">
+      <form action="">
+        <h3>Precios:</h3>
+        <p>Gaseosas: $1500</p>
+        <p>Cervezas: $2000</p>
+        
+        <h3>Elige cuántas Bebidas desea ordenar</h3>
+        <input type="number" min="0" max="10" id="Cant" name="Cantidad">
+
+        <h3>Bebidas en botella</h3>
+        <input type="checkbox" name="BebidaBotella" value="Coca" id="cocaBotella" checked />
+        <label for="cocaBotella">Coca Cola</label><br />
+
+        <input type="checkbox" name="BebidaBotella" value="Pepsi" id="pepsiBotella" checked />
+        <label for="pepsiBotella">Pepsi</label><br />
+
+        <input type="checkbox" name="BebidaBotella" value="Fanta" id="fantaBotella" checked />
+        <label for="fantaBotella">Fanta</label><br />
+
+        <input type="checkbox" name="BebidaBotella" value="Sprite" id="spriteBotella" checked />
+        <label for="spriteBotella">Sprite</label><br />
+
+        <h3>Bebidas alcohólicas en botella</h3>
+        <input type="checkbox" name="BebidaAlcohol" value="QuilmesClasica" id="quilmesClasica" checked />
+        <label for="quilmesClasica">Quilmes Clásica</label><br />
+
+        <input type="checkbox" name="BebidaAlcohol" value="QuilmesStout" id="quilmesStout" checked />
+        <label for="quilmesStout">Quilmes Stout</label><br />
+
+        <input type="checkbox" name="BebidaAlcohol" value="AndesClasica" id="andesClasica" checked />
+        <label for="andesClasica">Andes Clásica</label><br />
+
+        <h3>Bebidas en lata</h3>
+        <input type="checkbox" name="BebidaLata" value="CocaLata" id="cocaLata" checked />
+        <label for="cocaLata">Coca Cola</label><br />
+
+        <input type="checkbox" name="BebidaLata" value="PepsiLata" id="pepsiLata" checked />
+        <label for="pepsiLata">Pepsi</label><br />
+
+        <input type="checkbox" name="BebidaLata" value="QuilmesLata" id="quilmesLata" checked />
+        <label for="quilmesLata">Quilmes Stout</label><br />
+
+        <input type="checkbox" name="BebidaLata" value="AndesLata" id="andesLata" checked />
+        <label for="andesLata">Andes Clásica</label><br />
+
+        <h3>Tamaño de la Bebida</h3>
+        <input type="radio" name="tamano" value="500ml" id="500ml" />
+        <label for="500ml">500ml</label><br />
+
+        <input type="radio" name="tamano" value="1L" id="1L" />
+        <label for="1L">1L</label><br />
+
+        <input type="radio" name="tamano" value="1.5L" id="1.5L" />
+        <label for="1.5L">1.5L</label><br />
+
+        <h3>Elige el método de pago</h3>
+        <input type="radio" id="Efectivo" name="metodopago" value="Efectivo">
+        <label for="Efectivo">Efectivo</label>
+        <input type="radio" id="Mp" name="metodopago" value="MercadoPago">
+        <label for="Mp">Mercado pago</label> <br> <br>
+
+        <input type="submit" name="Pedidorealizado" value="Realizar pedido">
+        <input type="reset" name="Pedidocancelado" value="Cancelar pedido">
+      </form>
     </div>
-
-    <div>
-      <h2>Bebidas alcholicas en botella</h2>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Quilmes">Quilmes Clasica</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Quilmes">Quilmes Stout</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Andes">Andes Clasica</label>
-      <input type="checkbox" id="Ninguna" name="Ninguna">
-      <label for="Ninguna">Ninguna</label>
-    </div>
-
-    <div>
-      <h2>Bebidas en lata</h2>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Coca">Coca</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Pepsi">Pepsi</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Quilmes">Quilmes Stout</label>
-      <input type="checkbox" id="Bebida" name="Bebida">
-      <label for="Andes">Andes Clasica</label>
-      <input type="checkbox" id="Ninguna" name="Ninguna">
-      <label for="Ninguna">Ninguna</label>
-    </div>
-
-    <div class="metodopagoBebida">
-      <h3>Elige el metodo de pago</h3>
-      <input type="radio" id="Efectivo" name="metodopago">
-      <label for="Efectivo">Efectivo</label>
-      <input type="radio"id="Mp" name="metodopago"> 
-      <label for="Mp">Mercado pago</label>  <br> <br>
-      </div>
-
-      <div>
-        <h3>Seleccione la cantidad que desea ordenar</h3>
-        <label for="">Bebidas en botella</label>
-        <input type="number" min="0" max="30" id="Carne" name="Frita1" /> <br />
-        <br />
-
-        <label for="">Bebidas alcholicas en botella</label>
-        <input type="number" min="0" max="30" id="Carne" name="Frita1" /> <br />
-        <br />
-
-        <label for="">Bebidas en lata</label>
-        <input type="number" min="0" max="30" id="Carne" name="Frita1" /> <br />
-        <br />
-      </div>
-
-      <div class="botoHambupizza">
-      <input type="submit" name="Pedidorealizado" value="Realizar pedido">
-      <input type="reset" name="Pedidocancelado"  value="Cancelar pedido">
-      </div>
-    </form>
+  </div>
 </body>
 </html>

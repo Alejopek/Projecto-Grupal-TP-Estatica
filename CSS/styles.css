@@ -4,56 +4,114 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(121, 110, 91);
+  margin: 0;
+  padding: 0;
+  margin-top: 70px;
+  color: #333; /* Color de texto por defecto */
+  font-family: Arial, sans-serif;
+}
+
 header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #1e2222;
-  padding: 10px;
+  padding: 10px 20px; /* Padding horizontal y vertical */
   font-family: Arial, sans-serif;
   border-bottom: 2px solid #b28d16;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 100; /* Reducido para evitar conflictos */
+  top: 0;
+  left: 0;
+  height: 70px;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  object-fit: contain; /* Mantiene la proporción de la imagen */
 }
 
 nav {
-  flex: 1;
   display: flex;
-  justify-content: center;
+  gap: 30px;
+  margin-right: 20px; /* Espacio a la derecha */
 }
 
 nav a {
   color: white;
-  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease; /* Transición más suave */
+  padding: 8px 16px; /* Padding más amplio para mejor clickabilidad */
 }
 
-#logo {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+nav a:hover {
+  color: #b28d16;
 }
 
 .inicio {
-  height: 100vh;
+  min-height: calc(100vh - 70px); /* Resta la altura del header */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 #titulo {
   font-size: 4em;
   margin-bottom: 20px;
   font-family: "Arial Black", sans-serif;
+  color: #fff; /* Color de texto para mejor contraste */
 }
 
 .contacto {
   background-color: rgb(11, 11, 11);
   color: white;
   border-top: #b28d16 2px solid;
+  padding: 40px 20px; /* Padding vertical y horizontal */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  nav {
+    gap: 15px;
+  }
+  
+  nav a {
+    font-size: 1em;
+    padding: 6px 12px;
+  }
+  
+  #titulo {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  #titulo {
+    font-size: 2em;
+  }
 }

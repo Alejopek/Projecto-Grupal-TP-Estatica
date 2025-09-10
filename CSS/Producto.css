@@ -38,7 +38,6 @@ body{
   background: #313131;
   color: floralwhite;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgb(255, 255, 255);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -53,3 +52,32 @@ body{
   }
 }
 
+input[type="submit"][name="Pedidorealizado"] {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="submit"][name="Pedidorealizado"]:hover {
+  background-color: #218838;
+}
+
+input[type="reset"][name="Pedidocancelado"] {
+  background-color: #a72a28;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="reset"][name="Pedidocancelado"] {
+  background-color: #a72a28;
+}

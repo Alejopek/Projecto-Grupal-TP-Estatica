@@ -1,119 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rotiseria Pipa</title>
-  <link rel="stylesheet" href="CSS/styles.css" />
-  <link rel="stylesheet" href="CSS/Menu.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotiseria Pipa</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/Menu.css" />
+  </head>
 
-<body>
-  <header>
-    <a href="#logo">
-      <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
-    </a>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#productos">Productos</a>
-      <a href="#ubicacion">Ubicacion</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="inicio" class="inicio">
-      <h1 id="titulo">Rotiseria Pipa</h1>
-      <h3>Una Rotiseria para comer bien</h3>
-    </section>
-
-    <section id="ubicacion" class="ubicacion">
-      <h2>¿Dónde estamos?</h2>
-      <p>Estamos en Lanin 2020 - Neuquén - Argentina</p>
-      <p>Horarios: 8hrs - 12hrs | 19hrs - 23hrs</p>
-      <iframe src="https://www.google.com/maps?q=-38.96465429913116,-68.08779237070091&z=17&output=embed"
-        width="400" height="250" style="border:0" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-
-    <section id="productos" class="productos">
-      <h1>Menú principal</h1>
-      <p>Arma tu pedido haciendo click en las imágenes para ver las especificaciones y ordenar de forma eficiente.</p>
-
-      <div class="parent">
-        <div class="div1">
-          <h3>Milanesa a Caballo</h3>
-          <a href="Milanessa.html">
-            <img src="img/milanesa-a-caballo-Photoroom.png" alt="Milanesa a Caballo" width="400" height="300">
-          </a>
-        </div>
-
-        <div class="div2">
-          <h3>Hamburguepizza</h3>
-          <a href="Hamburguepizza.html">
-            <img src="img/photo-Photoroom.png" alt="Hamburguepizza" width="400" height="300">
-          </a>
-        </div>
-
-        <div class="div3">
-          <h3>Lomito</h3>
-          <a href="Lomito.html">
-            <img src="img/Lomito.jpg" alt="Lomito" width="400" height="300">
-          </a>
-        </div>
-
-        <div class="div4">
-          <h3>Pizza</h3>
-          <a href="Pizza.html">
-            <img src="img/Pizza.jpg" alt="Pizza" width="400" height="300">
-          </a>
-        </div>
-
-        <div class="div5">
-          <h3>Empanadas</h3>
-          <a href="Empanadas.html">
-            <img src="img/Empanadasfritas.jpg" alt="Empanadas" width="400" height="300">
-          </a>
-        </div>
-
-        <div class="div6">
-          <h3>Sorrentinos</h3>
-          <a href="Sorrentinos.html">
-            <img src="img/Sorrentinos.jpg" alt="Sorrentinos" width="400" height="300">
-          </a>
-        </div>
-
-        <div class="div7">
-          <h3>Bebidas</h3>
-          <a href="Bebida.html">
-            <img src="img/unnamed-Photoroom.png" alt="Bebidas" width="400" height="300">
-          </a>
-        </div>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="#inicio">
+          <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
+        </a>
+        <nav class="header-nav">
+          <a href="#inicio">Inicio</a>
+          <a href="#productos">Productos</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section id="contacto" class="contacto">
-      <h1>Rotiseria Pipa</h1>
-      <p>Contacto: +54-9-299-628-3362</p>
-      <p>Si no hay respuesta, llamar al: +54-9-299-471-9818</p>
+    <main>
+      <section id="inicio" class="inicio">
+        <h1 id="titulo">Rotiseria Pipa</h1>
+        <h3>Una Rotiseria para comer bien</h3>
+      </section>
 
-      <h2>Redes sociales:</h2>
-      <ul>
-        <li>Instagram: <a href="https://www.instagram.com">Ingrese aquí</a></li>
-        <li>Twitter/X: <a href="https://twitter.com">Ingrese aquí</a></li>
-        <li>Tiktok: <a href="https://www.tiktok.com">Ingrese aquí</a></li>
-      </ul>
+      <section id="ubicacion" class="ubicacion">
+        <div class="container-ubicacion">
+          <h2>¿Dónde estamos?</h2>
+          <p>Estamos en Lanin 2020 - Neuquén - Argentina</p>
+          <p>Horarios: 8hrs - 12hrs | 19hrs - 23hrs</p>
+          <iframe
+            src="https://www.google.com/maps?q=-38.96465429913116,-68.08779237070091&z=17&output=embed"
+            width="400"
+            height="250"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
 
-      <h2>Correo electrónico:</h2>
-      <p>venegas.alejo.epet20@gmail.com</p>
-    </section>
-  </main>
+      <section id="productos" class="productos">
+        <h1>Menú principal</h1>
+        <p>
+          Arma tu pedido haciendo click en las imágenes para ver las
+          especificaciones y ordenar de forma eficiente.
+        </p>
 
-  <footer>
-    <h2>Derechos reservados ® EPET 20</h2>
-  </footer>
+        <div class="parent">
+          <div class="div1">
+            <h3>Milanesa a Caballo</h3>
+            <a href="Milanessa.html">
+              <img
+                src="img/milanesa-a-caballo-Photoroom.png"
+                alt="Milanesa a Caballo"
+                width="400"
+                height="300"
+              />
+            </a>
+          </div>
 
-  <link rel="stylesheet" href="CSS/Menu.css"> <div class="parent">
-    
-</section>
-</body>
+          <div class="div2">
+            <h3>Hamburguepizza</h3>
+            <a href="Hamburguepizza.html">
+              <img
+                src="img/photo-Photoroom.png"
+                alt="Hamburguepizza"
+                width="400"
+                height="300"
+              />
+            </a>
+          </div>
+
+          <div class="div3">
+            <h3>Lomito</h3>
+            <a href="Lomito.html">
+              <img src="img/Lomito.jpg" alt="Lomito" width="400" height="300" />
+            </a>
+          </div>
+
+          <div class="div4">
+            <h3>Pizza</h3>
+            <a href="Pizza.html">
+              <img src="img/Pizza.jpg" alt="Pizza" width="400" height="300" />
+            </a>
+          </div>
+
+          <div class="div5">
+            <h3>Empanadas</h3>
+            <a href="Empanadas.html">
+              <img
+                src="img/Empanadasfritas.jpg"
+                alt="Empanadas"
+                width="400"
+                height="300"
+              />
+            </a>
+          </div>
+
+          <div class="div6">
+            <h3>Sorrentinos</h3>
+            <a href="Sorrentinos.html">
+              <img
+                src="img/Sorrentinos.jpg"
+                alt="Sorrentinos"
+                width="400"
+                height="300"
+              />
+            </a>
+          </div>
+
+          <div class="div7">
+            <h3>Bebidas</h3>
+            <a href="Bebida.html">
+              <img
+                src="img/unnamed-Photoroom.png"
+                alt="Bebidas"
+                width="400"
+                height="300"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto">
+        <h1>Rotiseria Pipa</h1>
+        <p>Contacto: +54-9-299-628-3362</p>
+        <p>Si no hay respuesta, llamar al: +54-9-299-471-9818</p>
+
+        <h2>Redes sociales:</h2>
+        <ul>
+          <li>
+            Instagram: <a href="https://www.instagram.com">Ingrese aquí</a>
+          </li>
+          <li>Twitter/X: <a href="https://twitter.com">Ingrese aquí</a></li>
+          <li>Tiktok: <a href="https://www.tiktok.com">Ingrese aquí</a></li>
+        </ul>
+
+        <h2>Correo electrónico:</h2>
+        <p>venegas.alejo.epet20@gmail.com</p>
+      </section>
+    </main>
+
+    <footer>
+      <h2>Derechos reservados ® EPET 20</h2>
+    </footer>
+  </body>
 </html>

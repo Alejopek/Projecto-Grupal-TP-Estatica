@@ -10,7 +10,7 @@
 
 <body>
   <div class="producto-info">
-    <div class="milanesa-caja">
+    <div class="producto-caja">
       <img src="img/photo-Photoroom.png" width="350" height="350" alt="Hamburguepizza" />
       <h2>Hamburguepizza</h2>
       <p>
@@ -25,16 +25,16 @@
         <input type="number" min="0" max="5" id="Cant" name="Cantidad">
 
         <h3>Dejar o Sacar</h3>
-        <input type="checkbox" name="SacarAceitunas" value="Aceitunas" id="aceitunas" checked />
+        <input type="checkbox" name="SacarAceitunas" value="Aceitunas" id="aceitunas" />
         <label for="aceitunas">Aceitunas</label><br />
 
-        <input type="checkbox" name="SacarPeperoni" value="Peperoni" id="peperoni" checked />
+        <input type="checkbox" name="SacarPeperoni" value="Peperoni" id="peperoni" />
         <label for="peperoni">Peperoni</label><br />
 
-        <input type="checkbox" name="SacarJamon" value="Jamon" id="jamon" checked />
+        <input type="checkbox" name="SacarJamon" value="Jamon" id="jamon" />
         <label for="jamon">Jamón</label><br />
 
-        <input type="checkbox" name="SacarMorron" value="Morron" id="morron" checked />
+        <input type="checkbox" name="SacarMorron" value="Morron" id="morron" />
         <label for="morron">Morrón</label><br />
 
         <h3>Que tamaño desea su pedido</h3>
@@ -61,9 +61,9 @@
         <label for="fanta">Fanta</label><br />
 
         <h3>Elige el método de pago</h3>
-        <input type="radio" id="Efectivo" name="metodopago" value="Efectivo">
+        <input type="radio" id="Efectivo" name="metodopago" value="Efectivo"  required>
         <label for="Efectivo">Efectivo</label>
-        <input type="radio" id="Mp" name="metodopago" value="MercadoPago">
+        <input type="radio" id="Mp" name="metodopago" value="MercadoPago"  required>
         <label for="Mp">Mercado pago</label> <br> <br>
 
         <input type="submit" name="Pedidorealizado" value="Realizar pedido">

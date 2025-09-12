@@ -9,60 +9,65 @@ body {
   margin: 0;
   padding: 0;
   margin-top: 70px;
-  color: #333; /* Color de texto por defecto */
+  color: #333;
   font-family: Arial, sans-serif;
 }
 
 header {
   background-color: #1e2222;
-  padding: 10px 20px; /* Padding horizontal y vertical */
+  padding: 10px 20px;
   font-family: Arial, sans-serif;
   border-bottom: 2px solid #b28d16;
   position: fixed;
   width: 100%;
-  z-index: 100; /* Reducido para evitar conflictos */
+  z-index: 100;
   top: 0;
   left: 0;
   height: 70px;
 }
 
 .header-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
+  position: relative;
 }
 
 #logo {
   height: 50px;
   width: 50px;
-  margin-left: 10px;
-  object-fit: contain; /* Mantiene la proporción de la imagen */
+  margin-right: 30px;
+  margin-left: 0;
+  object-fit: contain;
+  position: static;
+  transform: none;
 }
 
-nav {
+.header-nav {
+  flex: 1;
   display: flex;
+  justify-content: center;
   gap: 30px;
-  margin-right: 20px; /* Espacio a la derecha */
+  align-items: center;
+  margin: 0;
 }
 
-nav a {
+.header-nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
-  transition: color 0.3s ease; /* Transición más suave */
-  padding: 8px 16px; /* Padding más amplio para mejor clickabilidad */
+  transition: color 0.3s ease;
+  padding: 8px 16px;
 }
 
-nav a:hover {
+.header-nav a:hover {
   color: #b28d16;
 }
 
 .inicio {
-  min-height: calc(100vh - 70px); /* Resta la altura del header */
+  min-height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,27 +80,49 @@ nav a:hover {
   font-size: 4em;
   margin-bottom: 20px;
   font-family: "Arial Black", sans-serif;
-  color: #fff; /* Color de texto para mejor contraste */
+  color: #fff;
+}
+
+.ubicacion {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container-ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .contacto {
   background-color: rgb(11, 11, 11);
   color: white;
   border-top: #b28d16 2px solid;
-  padding: 40px 20px; /* Padding vertical y horizontal */
+  padding: 40px 20px;
 }
 
-/* Media queries para responsividad */
 @media (max-width: 768px) {
   nav {
     gap: 15px;
   }
-  
+
   nav a {
     font-size: 1em;
     padding: 6px 12px;
   }
-  
+
   #titulo {
     font-size: 3em;
   }
@@ -106,11 +133,11 @@ nav a:hover {
     flex-direction: column;
     height: auto;
   }
-  
+
   nav {
     margin-top: 10px;
   }
-  
+
   #titulo {
     font-size: 2em;
   }

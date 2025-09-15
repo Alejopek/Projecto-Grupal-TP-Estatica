@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bebidas</title>
+  <link rel="stylesheet" href="CSS/Producto.css">
+</head>
+
+<body>
+  <div class="producto-info">
+    <div class="producto-caja">
+      <img src="img/unnamed-Photoroom.png" width="350" height="350" alt="Bebidas" />
+      <h2>Sector de bebidas</h2>
+      <p>
+        Bebidas, tenemos para ofrecer a su consumo bebidas alcohólicas como no alcohólicas tales como: Coca Cola, Pepsi, Sprite, Fanta, Quilmes y más.
+      </p>
+    </div>
+
+    <div class="opciones-caja">
+      <form action="">
+        <h3>Precios:</h3>
+        <p>Gaseosas: $1500</p>
+        <p>Cervezas: $2000</p>
+        
+        <h3>Elige cuántas Bebidas desea ordenar</h3>
+        <input type="number" min="0" max="10" id="Cant" name="Cantidad">
+
+        <h3>Bebidas en botella</h3>
+        <input type="checkbox" name="BebidaBotella" value="Coca" id="cocaBotella" />
+        <label for="cocaBotella">Coca Cola</label><br />
+
+        <input type="checkbox" name="BebidaBotella" value="Pepsi" id="pepsiBotella" />
+        <label for="pepsiBotella">Pepsi</label><br />
+
+        <input type="checkbox" name="BebidaBotella" value="Fanta" id="fantaBotella" />
+        <label for="fantaBotella">Fanta</label><br />
+
+        <input type="checkbox" name="BebidaBotella" value="Sprite" id="spriteBotella" />
+        <label for="spriteBotella">Sprite</label><br />
+
+        <h3>Bebidas alcohólicas en botella</h3>
+        <input type="checkbox" name="BebidaAlcohol" value="QuilmesClasica" id="quilmesClasica" />
+        <label for="quilmesClasica">Quilmes Clásica</label><br />
+
+        <input type="checkbox" name="BebidaAlcohol" value="QuilmesStout" id="quilmesStout" />
+        <label for="quilmesStout">Quilmes Stout</label><br />
+
+        <input type="checkbox" name="BebidaAlcohol" value="AndesClasica" id="andesClasica" />
+        <label for="andesClasica">Andes Clásica</label><br />
+
+        <h3>Bebidas en lata</h3>
+        <input type="checkbox" name="BebidaLata" value="CocaLata" id="cocaLata" />
+        <label for="cocaLata">Coca Cola</label><br />
+
+        <input type="checkbox" name="BebidaLata" value="PepsiLata" id="pepsiLata" />
+        <label for="pepsiLata">Pepsi</label><br />
+
+        <input type="checkbox" name="BebidaLata" value="QuilmesLata" id="quilmesLata" />
+        <label for="quilmesLata">Quilmes Stout</label><br />
+
+        <input type="checkbox" name="BebidaLata" value="AndesLata" id="andesLata" />
+        <label for="andesLata">Andes Clásica</label><br />
+
+        <h3>Tamaño de la Bebida</h3>
+        <input type="radio" name="tamano" value="500ml" id="500ml" required />
+        <label for="500ml">500ml</label><br />
+
+        <input type="radio" name="tamano" value="1L" id="1L" required />
+        <label for="1L">1L</label><br />
+
+        <input type="radio" name="tamano" value="1.5L" id="1.5L" required />
+        <label for="1.5L">1.5L</label><br />
+
+        <h3>Elige el método de pago</h3>
+        <input type="radio" id="Efectivo" name="metodopago" value="Efectivo" required>
+        <label for="Efectivo">Efectivo</label>
+        <input type="radio" id="Mp" name="metodopago" value="MercadoPago" required>
+        <label for="Mp">Mercado pago</label> <br> <br>
+
+        <input type="submit" name="Pedidorealizado" value="Realizar pedido">
+        <input type="reset" name="Pedidocancelado" value="Cancelar pedido">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

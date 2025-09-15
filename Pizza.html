@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza pedido</title>
+    <link rel="stylesheet" href="CSS/Producto.css">
+  </head>
+  <body>
+    <form>
+      <div class="producto-info">
+
+      <div class="producto-caja">
+
+        <img src="img/Pizza.jpg" width="350" height="300" />
+        <h2>Pizza</h2>
+        <h3>Precio: $15000</h3>
+        <p>Pizza hecha con masa casera recien salida del horno</p>
+  </div>
+<div class="opciones-caja">
+        <h3>Cuantas pizzas desea ordenar</h3>
+        <input type="number" min="0" max="30" id="Pizza" name="cantidad" />
+      
+
+      
+        <h3>Elige el tipo de pizza</h3>
+        <select id="Eleccion" name="Sabor">
+          <option value="mozzarella">Mozzarella</option>
+          <option value="napolitana">Napolitana</option>
+          <option value="especial">Especial</option>
+          <option value="choclo">Choclo</option>
+        </select>
+        <br />
+
+     
+        <h3>Elige el metodo de pago</h3>
+        <label for="Efectivo"><input type="radio" id="Efectivo" name="metodopago">
+        Efectivo</label>
+        <label for="Mp"><input type="radio" id="Mp" name="metodopago">
+        Mercado pago</label>
+        <br>
+
+      
+        <input type="submit" name="Pedidorealizado" value="Realizar pedido"> 
+        <br>
+        <input type="reset" name="Pedidocancelado" value="Cancelar pedido">
+      </div>
+      </div>
+  
+    </form>
+  </body>
+</html>

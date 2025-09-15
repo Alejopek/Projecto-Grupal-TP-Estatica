@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empanadas rotiseria</title>
+    <link rel="stylesheet" href="CSS/Producto.css">
+  </head>
+  <body>
+    <form>
+      <div class="producto-info">
+      <div class="producto-caja">
+        <img src="img/Empanadasfritas.jpg" width="450" height="300" />
+        <h2>Empanadas</h2>
+        <h3>Precio c/u: $2000</h3>
+        <p>Empanadas fritas de diferentes gustos</p>
+      </div>
+
+      <div class="opciones-caja">
+        <h3>Seleccione la cantidad que desea ordenar</h3>
+        <label for="">Empanada de carne</label>
+        <input type="number" min="0" max="30" id="Carne" name="Frita1" /> <br />
+        <br />
+
+        <label for="">Empanada de pollo</label>
+        <input type="number" min="0" max="30" id="Pollo" name="Frita2" /> <br />
+        <br />
+
+        <label for="">Empanada de jamon y queso</label>
+        <input type="number" min="0" max="30" id="Jamon" name="Frita3" /> <br />
+      
+
+     
+        <h3>Ingrese un metodo de pago</h3>
+        <input type="radio" id="Efectivo" name="metodopago" />
+        <label for="Efectivo">Efectivo</label>
+        <input type="radio" id="Mp" name="metodopago" />
+        <label for="Mp">Mercado pago</label> <br />
+        <br />
+      
+
+      
+        <input type="submit" value="Enviar pedido" name="Pedidorealizado" />
+        <input type="reset" value="Cancelar pedido" name="Pedidocancelado" />
+      </div>
+      </div>
+    </form>
+  </body>
+</html>

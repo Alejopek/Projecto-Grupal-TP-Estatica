@@ -9,7 +9,6 @@
   <body>
     <form>
       <div class="producto-info">
-
       <div class="producto-caja">
 
         <img src="img/Pizza.jpg" width="350" height="300" />
@@ -18,6 +17,7 @@
         <p>Pizza hecha con masa casera recien salida del horno</p>
   </div>
 <div class="opciones-caja">
+  <div class="cantidadpizza">
         <h3>Cuantas pizzas desea ordenar</h3>
         <input type="number" min="0" max="30" id="Pizza" name="cantidad" />
       
@@ -31,19 +31,21 @@
           <option value="choclo">Choclo</option>
         </select>
         <br />
-
-     
+</div>
+     <div class="metododepagopizza">
         <h3>Elige el metodo de pago</h3>
         <label for="Efectivo"><input type="radio" id="Efectivo" name="metodopago">
         Efectivo</label>
         <label for="Mp"><input type="radio" id="Mp" name="metodopago">
         Mercado pago</label>
         <br>
+</div>
 
-      
+      <div class="pedidopizza">
         <input type="submit" name="Pedidorealizado" value="Realizar pedido"> 
         <br>
         <input type="reset" name="Pedidocancelado" value="Cancelar pedido">
+      </div>
       </div>
       </div>
   

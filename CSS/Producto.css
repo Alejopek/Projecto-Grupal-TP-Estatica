@@ -98,3 +98,18 @@ input[type="reset"][name="Pedidocancelado"] {
 input[type="reset"][name="Pedidocancelado"] {
   background-color: #a72a28;
 }
+
+.boton-volver {
+  padding: 20px;
+  text-align: left;
+}
+
+.btn-volver {
+  background-color: #313131;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}

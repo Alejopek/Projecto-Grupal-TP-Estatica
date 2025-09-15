@@ -4,42 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorrentinos pedido</title>
-    <link rel="stylesheet" href="CSS/Producto.css">
+    <link rel="stylesheet" href="CSS/Producto.css" />
   </head>
   <body>
     <div class="boton-volver">
-<a href="index.html" class="btn-volver">Volver al menú</a>
-</div>
+      <a href="index.html" class="btn-volver">Volver al menú</a>
+    </div>
     <form>
       <div class="producto-info">
-      
-      <div class="producto-caja">
-        <img src="img/Sorrentinos.p.PNG" width="450" height="300" />
-        <h2>Sorrentinos</h2>
-        <h3>Precio: $7500</h3>
-        <p>Sorrentinos caseros con salsa y queso</p>
-      </div>
-<div class="opciones-caja">
-      <div class="cantidadsorrentinos">
-        <h3>Elige la cantidad de platos que va a ordenar</h3>
-        <input type="number" min="0" max="30" id="Cantidad" name="Plato" />
-        <br />
-      </div>
+        <div class="producto-caja">
+          <img src="img/Sorrentinos.p.PNG" width="450" height="300" />
+          <h2>Sorrentinos</h2>
+          <h3>Precio: $7500</h3>
+          <p>Sorrentinos caseros con salsa y queso</p>
+        </div>
+        <div class="opciones-caja">
+          <div class="cantidadsorrentinos">
+            <h3>Elige la cantidad de platos que va a ordenar</h3>
+            <input type="number" min="0" max="30" id="Cantidad" name="Plato" />
+            <br />
+          </div>
 
-      <div class="metodopagosorrentinos">
-        <h3>Elige un metodo de pago</h3>
-        <input type="radio" id="Efectivo" name="metodopago" />
-        <label for="Efectivo">Efectivo</label>
-        <input type="radio" id="Mp" name="metodopago" />
-        <label for="Mp">Mercado pago</label> <br />
-        <br />
-      </div>
+          <div class="metodopagosorrentinos">
+            <h3>Elige un metodo de pago</h3>
+            <input type="radio" id="Efectivo" name="metodopago" />
+            <label for="Efectivo">Efectivo</label>
+            <input type="radio" id="Mp" name="metodopago" />
+            <label for="Mp">Mercado pago</label> <br />
+            <br />
+          </div>
 
-      <div class="pedidosorrentinos">
-        <input type="submit" name="Pedidorealizado" value="Realizar pedido" />
-        <input type="reset" name="Pedidocancelado" value="Cancelar pedido" />
-      </div>
-      </div>
+          <div class="pedidosorrentinos">
+            <input
+              type="submit"
+              name="Pedidorealizado"
+              value="Realizar pedido"
+            />
+            <input
+              type="reset"
+              name="Pedidocancelado"
+              value="Cancelar pedido"
+            />
+          </div>
+        </div>
       </div>
     </form>
   </body>

@@ -105,7 +105,7 @@ input[type="reset"][name="Pedidocancelado"] {
 }
 
 .btn-volver {
-  background-color: #313131;
+  background-color: #ff0000;
   color: white;
   padding: 10px 20px;
   text-decoration: none;

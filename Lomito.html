@@ -17,12 +17,12 @@
         <p>Lomito clasico con una porcion de papas fritas</p>
       </div>
 <div class="opciones-caja">
-      
+      <div class="cantidadlomito">
         <h3>Elige cuantos Lomitos va a ordenar</h3>
         <input type="number" min="0" max="30" id="Cant" name="Cantidad" />
-      
+      </div>
 
-     
+     <div class="tamañolomito">
         <h3>Elige el tamaño de tu Lomito</h3>
         <label for="Opcion1">Chico</label>
         <input type="radio" id="Opcion1" name="Tamaño" />
@@ -31,8 +31,8 @@
         <label for="Opcion3">Grande</label>
         <input type="radio" id="Opcion3" name="Tamaño" />
       
-
-     
+</div>
+     <div class="ordenlomito">
         <h3>Personaliza tu Lomito</h3>
         <label for="Tomate">Tomate</label>
         <input type="checkbox" id="Tomate" name="Ingredientes" />
@@ -42,21 +42,19 @@
         <input type="checkbox" id="Jamon" name="Ingredientes" />
         <label for="Queso">Queso</label>
         <input type="checkbox" id="Queso" name="Ingredientes" /> <br />
-     
-
-      
+</div>
+      <div class="metodopagolomito">
         <h3>Elige un metodo de pago</h3>
         <input type="radio" id="Efectivo" name="metodopago" />
         <label for="Efectivo">Efectivo</label>
         <input type="radio" id="Mp" name="metodopago" />
         <label for="Mp">Mercado pago</label> <br />
         <br />
-      
-
-      
+</div>
+      <div class="pedidolomito">
         <input type="submit" name="Pedidorealizado" value="Realizar pedido" />
         <input type="reset" name="Pedidocancelado" value="Cancelar pedido" />
-      
+      </div>
       </div>
     </div>
     </form>

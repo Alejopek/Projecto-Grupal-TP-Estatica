@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(121, 110, 91);
+}
+
+.review-info {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.review-caja-unica {
+    background: linear-gradient(to bottom, #ffffff 40%, #313131 40%);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow:
+        0 -4px 12px #313131,
+        0 12px 24px #fff;
+    padding: 24px;
+}
+
+.review-caja-unica h1 {
+    margin: 15px 0;
+    text-align: center;
+    color: #313131;
+    font-size: 2em;
+}
+
+.review-caja-unica p {
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    color: #313131;
+}
+
+.review-form {
+    margin-top: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #be1a1a;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    font-size: 14px;
+}
+
+.btn-submit {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+.boton-volver {
+    padding: 20px;
+    text-align: left;
+    margin-top: 90px;
+}
+
+.btn-volver {
+    background-color: #313131;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #b28d16;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .review-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas - Rotiseria Pipa</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/reseñas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
+            </a>
+            <nav class="header-nav">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#productos">Productos</a>
+                <a href="index.html#ubicacion">Ubicación</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="boton-volver">
+        <a href="index.html" class="btn-volver">Volver al Menú</a>
+    </div>
+
+    <main>
+        <div class="review-info">
+            <div class="review-caja-unica">
+                <h1>Deja tu Reseña</h1>
+
+                <form class="review-form" id="reviewForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comida">Selecciona la comida:</label>
+                        <select id="comida" name="comida" required>
+                            <option value="">-- Selecciona una opción --</option>
+                            <option value="milanesa">Milanesa a Caballo</option>
+                            <option value="hamburguepizza">Hamburguepizza</option>
+                            <option value="lomito">Lomito</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="empanadas">Empanadas</option>
+                            <option value="sorrentinos">Sorrentinos</option>
+                            <option value="bebidas">Bebidas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario">Dejanos un comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" placeholder="Cuéntanos tu experiencia..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email (opcional)</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn-submit">Enviar Reseña</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

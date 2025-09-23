@@ -23,60 +23,50 @@
         </div>
     </header>
 
+    <div class="boton-volver">
+        <a href="index.html" class="btn-volver">Volver al Menú</a>
+    </div>
+
     <main>
-            
-            <h1 class="review-title"> Deja tu Reseña</h1>
-            <p class="review-subtitle">Tu opinión nos ayuda a mejorar nuestro servicio</p>
+        <div class="review-info">
+            <div class="review-caja-unica">
+                <h1>Deja tu Reseña</h1>
 
-            <form class="review-form" id="reviewForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="comida">Selecciona la comida:</label>
-                    <select id="comida" name="comida" required>
-                        <option value="">-- Selecciona una opción --</option>
-                        <option value="milanesa">Milanesa a Caballo</option>
-                        <option value="hamburguepizza">Hamburguepizza</option>
-                        <option value="lomito">Lomito</option>
-                        <option value="pizza">Pizza</option>
-                        <option value="empanadas">Empanadas</option>
-                        <option value="sorrentinos">Sorrentinos</option>
-                        <option value="bebidas">Bebidas</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Calificación:</label>
-                    <div class="rating-container">
-                        <div class="star-rating" id="starRating">
-                            <span class="star" data-rating="1"></span>
-                            <span class="star" data-rating="2"></span>
-                            <span class="star" data-rating="3"></span>
-                            <span class="star" data-rating="4"></span>
-                            <span class="star" data-rating="5"></span>
-                        </div>
-                        <span id="ratingText">Selecciona una calificación</span>
+                <form class="review-form" id="reviewForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
                     </div>
-                    <input type="hidden" id="rating" name="rating" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="comentario">Comentario:</label>
-                    <textarea id="comentario" name="comentario" rows="4" placeholder="Cuéntanos tu experiencia..."></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="comida">Selecciona la comida:</label>
+                        <select id="comida" name="comida" required>
+                            <option value="">-- Selecciona una opción --</option>
+                            <option value="milanesa">Milanesa a Caballo</option>
+                            <option value="hamburguepizza">Hamburguepizza</option>
+                            <option value="lomito">Lomito</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="empanadas">Empanadas</option>
+                            <option value="sorrentinos">Sorrentinos</option>
+                            <option value="bebidas">Bebidas</option>
+                        </select>
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Email (opcional):</label>
-                    <input type="email" id="email" name="email">
-                </div>
+                    <div class="form-group">
+                        <label for="comentario">Dejanos un comentario:</label>
+                        <textarea id="comentario" name="comentario" rows="4" placeholder="Cuéntanos tu experiencia..."></textarea>
+                    </div>
 
-                <div style="text-align: center;">
-                    <button type="submit" class="btn-submit">Enviar Reseña</button>
-                </div>
-            </form>
+                    <div class="form-group">
+                        <label for="email">Email (opcional)</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn-submit">Enviar Reseña</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
 </body>

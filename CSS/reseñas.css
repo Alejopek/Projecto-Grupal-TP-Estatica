@@ -1,51 +1,104 @@
-
-header {
-    background-color: #2c3e50;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+body {
+    background-color: rgb(121, 110, 91);
 }
 
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+.review-info {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 16px;
 }
 
-.header-nav {
-    display: flex;
-    gap: 20px;
+.review-caja-unica {
+    background: linear-gradient(to bottom, #ffffff 40%, #313131 40%);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow:
+        0 -4px 12px #313131,
+        0 12px 24px #fff;
+    padding: 24px;
 }
 
-.header-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.review-caja-unica h1 {
+    margin: 15px 0;
+    text-align: center;
+    color: #313131;
+    font-size: 2em;
 }
 
-.header-nav a:hover {
-    color: #f39c12;
+.review-caja-unica p {
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    color: #313131;
 }
 
-footer {
-    background-color: #2c3e50;
-    padding: 15px 0;
-    margin-top: 50px;
-    text-align: left;
+.review-form {
+    margin-top: 16px;
 }
 
-footer h2 {
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #be1a1a;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
     color: white;
     font-size: 14px;
-    margin: 0;
-    padding-left: 20px;
-    font-weight: normal;
 }
 
-.review-container {
-    margin-top: 90px;
+.btn-submit {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+.boton-volver {
     padding: 20px;
+    text-align: left;
+    margin-top: 90px;
+}
+
+.btn-volver {
+    background-color: #313131;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #b28d16;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .review-info {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

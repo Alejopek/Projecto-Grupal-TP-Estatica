@@ -39,7 +39,7 @@ main {
     box-shadow:  0 0 20px #e60073 ;
 }
 
-.icono:hover:nth-child(2) {
+.icono.twitter:hover{
     background-color: #1877f2;
     box-shadow:  0 0 20px #1877f2;
 }
@@ -50,8 +50,8 @@ main {
 }
 
 .icono:hover:nth-child(4) {
-    background-color: #1da1f2;
-    box-shadow:  0 0 20px #1da1f2 ;
+    background-color:#0000ff;
+    box-shadow:  0 0 20px #0000ff ;
 }
 
 .icono i {

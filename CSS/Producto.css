@@ -77,12 +77,8 @@ input[type="submit"][name="Pedidorealizado"] {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
-input[type="submit"][name="Pedidorealizado"]:hover {
-  background-color: #218838;
-}
 
 input[type="reset"][name="Pedidocancelado"] {
   background-color: #a72a28;
@@ -92,7 +88,6 @@ input[type="reset"][name="Pedidocancelado"] {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 input[type="reset"][name="Pedidocancelado"] {
@@ -111,5 +106,36 @@ input[type="reset"][name="Pedidocancelado"] {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+}
+
+@view-transition{
+  navigation: auto;
+}
+
+::view-transition-group(*){
+  animation-duration: 2s;
+}
+
+.producto-caja {
+  animation: slideInLeft 1s ease-out;
+}
+
+.producto-caja img {
+  transition: transform 0.3s ease;
+}
+
+.producto-caja img:hover {
+  transform: scale(1.05);
+}
+
+.producto-caja h2 {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.producto-caja p {
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.opciones-caja {
+  animation: slideInRight 1s ease-out 0.2s both;
 }

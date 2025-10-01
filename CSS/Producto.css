@@ -1,5 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   background-color: rgb(121, 110, 91);
+}
+
+header {
+  background-color: #1e2222;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid #b28d16;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 70px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
+  margin-left: 0;
+  object-fit: contain;
+  position: static;
+  transform: none;
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+  padding: 8px 16px;
+}
+
+.header-nav a:hover {
+  color: #b28d16;
 }
 
 .producto-info {

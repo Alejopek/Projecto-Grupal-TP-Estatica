@@ -1,5 +1,10 @@
 body{
   background-color: rgb(121, 110, 91);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .producto-info {
@@ -13,60 +18,110 @@ body{
 }
 
 .producto-caja {
-  flex: 0 1 400px;
-  background: linear-gradient(to bottom, #ffffff 50%, #313131 50%);
+  position: relative;
+  flex: 0 1 500px;
+  background: linear-gradient(to bottom, #323030 50%, #313131 50%);
   color: #fff;
-  border-radius: 12px;
-  box-shadow:
-    0 -4px 12px #313131,
-    0 12px 24px #fff;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 300px;
-  max-width: 400px;
-  height: fit-content;
-  padding: 20px;
+  min-width: 320px;
+  max-width: 500px;
+  height: 450px;
+  padding: 30px;
   margin: 0 auto;
+  overflow: visible;
+  transition: height 0.5s ease;
+  z-index: 1;
+}
+
+.producto-caja::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  animation: borderRotate 4s linear infinite;
+  background-size: 300% 100%;
+}
+
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.producto-caja:hover {
+  height: auto;
+  min-height: 800px;
 }
 
 .producto-caja img {
   width: 100%;
-  max-width: 350px;
+  max-width: 280px;
   height: auto;
   border-radius: 10px;
   margin-bottom: 16px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .producto-caja h2 {
-  margin: 15px 0;
+  margin: 10px 0;
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .producto-caja p {
   text-align: center;
   padding: 0 15px;
   margin-bottom: 15px;
+  color: #ffffff;
+  line-height: 1.5;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
-.opciones-caja {
-  flex: 1;
-  background: #313131;
-  color: floralwhite;
-  border-radius: 12px;
-  padding: 24px;
+.producto-caja:hover p {
+  max-height: 100px;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.producto-caja h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 12px 0 8px 0;
+  font-weight: 500;
+}
+
+.producto-caja form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-width: 300px;
+  gap: 8px;
+  max-height: 0;
+  opacity: 0;
+  overflow: visible;
+  transition: all 0.5s ease;
 }
 
-@media (max-width: 800px) {
-  .producto-info {
-    flex-direction: column;
-    gap: 20px;
-  }
+.producto-caja:hover form {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.producto-caja label {
+  color: #fff;
+  margin-left: 5px;
+  font-size: 0.9rem;
 }
 
 input[type="submit"][name="Pedidorealizado"] {
@@ -78,6 +133,7 @@ input[type="submit"][name="Pedidorealizado"] {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
+  margin-top: 10px;
 }
 
 input[type="submit"][name="Pedidorealizado"]:hover {
@@ -93,10 +149,11 @@ input[type="reset"][name="Pedidocancelado"] {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
+  margin-top: 5px;
 }
 
-input[type="reset"][name="Pedidocancelado"] {
-  background-color: #a72a28;
+input[type="reset"][name="Pedidocancelado"]:hover {
+  background-color: #8b1f1e;
 }
 
 .boton-volver {
@@ -114,36 +171,8 @@ input[type="reset"][name="Pedidocancelado"] {
   transition: background-color 0.3s ease;
 }
 
-@view-transition{
-  navigation: auto;
-}
-
-::view-transition-group(*){
-  animation-duration: 2s;
-}
-
-.producto-caja {
-  animation: slideInLeft 1s ease-out;
-}
-
-.producto-caja img {
-  transition: transform 0.3s ease;
-}
-
-.producto-caja img:hover {
-  transform: scale(1.05);
-}
-
-.producto-caja h2 {
-  animation: fadeInUp 1s ease-out 0.3s both;
-}
-
-.producto-caja p {
-  animation: fadeInUp 1s ease-out 0.5s both;
-}
-
-.opciones-caja {
-  animation: slideInRight 1s ease-out 0.2s both;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 

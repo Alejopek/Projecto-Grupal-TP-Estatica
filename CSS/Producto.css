@@ -124,6 +124,24 @@ body{
   font-size: 0.9rem;
 }
 
+.producto-caja form div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 15px;
+  align-items: center;
+}
+
+.producto-caja form div input[type="checkbox"],
+.producto-caja form div input[type="radio"] {
+  margin: 0;
+  justify-self: end;
+}
+
+.producto-caja form  div label {
+  margin: 0;
+  justify-self: start;
+}
+
 input[type="submit"][name="Pedidorealizado"] {
   background-color: #28a745;
   color: #fff;

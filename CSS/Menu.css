@@ -36,15 +36,29 @@
     object-fit: contain;
     background-color: #ffffff;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.3s ease;
+    cursor: pointer;
 }
 
-@view-transition {
-    navigation: auto;
+.card img:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 15px 40px rgba(178, 141, 22, 0.4);
+    filter: brightness(1.05);
 }
 
-::view-transition-group(*) {
-    animation-duration: 300ms;
+.card {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .carousel .card h3 {

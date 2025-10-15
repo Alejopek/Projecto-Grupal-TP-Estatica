@@ -44,7 +44,7 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #be1a1a;
+    color: #f5b62e;
 }
 
 .form-group input,
@@ -67,13 +67,9 @@ body {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s;
     font-size: 16px;
 }
 
-.btn-submit:hover {
-    background-color: #218838;
-}
 
 .boton-volver {
     padding: 20px;
@@ -88,13 +84,8 @@ body {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-.btn-volver:hover {
-    background-color: #b28d16;
-    color: white;
-}
 
 @media (max-width: 800px) {
     .review-info {

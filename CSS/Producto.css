@@ -1,5 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
   background-color: rgb(121, 110, 91);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
 }
 
 .producto-info {
@@ -13,60 +25,158 @@ body{
 }
 
 .producto-caja {
-  flex: 0 1 400px;
-  background: linear-gradient(to bottom, #ffffff 50%, #313131 50%);
+  position: relative;
+  flex: 0 1 500px;
+  background: linear-gradient(to bottom, #323030 50%, #313131 50%);
   color: #fff;
-  border-radius: 12px;
-  box-shadow:
-    0 -4px 12px #313131,
-    0 12px 24px #fff;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 300px;
-  max-width: 400px;
-  height: fit-content;
-  padding: 20px;
+  min-width: 320px;
+  max-width: 500px;
+  height: 450px;
+  padding: 30px;
   margin: 0 auto;
+  overflow: visible;
+  transition: height 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.producto-caja::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  animation: borderRotate 4s linear infinite;
+  background-size: 300% 100%;
+}
+
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.producto-caja:hover {
+  height: auto;
+  min-height: 800px;
 }
 
 .producto-caja img {
   width: 100%;
-  max-width: 350px;
+  max-width: 280px;
   height: auto;
   border-radius: 10px;
   margin-bottom: 16px;
   object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.producto-caja img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.1);
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .producto-caja h2 {
-  margin: 15px 0;
+  margin: 10px 0;
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .producto-caja p {
   text-align: center;
   padding: 0 15px;
   margin-bottom: 15px;
+  color: #ffffff;
+  line-height: 1.5;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
-.opciones-caja {
-  flex: 1;
-  background: #313131;
-  color: floralwhite;
-  border-radius: 12px;
-  padding: 24px;
+.producto-caja:hover p {
+  max-height: 100px;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.producto-caja h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 12px 0 8px 0;
+  font-weight: 500;
+}
+
+.producto-caja form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-width: 300px;
+  gap: 8px;
+  max-height: 0;
+  opacity: 0;
+  overflow: visible;
+  transition: all 0.5s ease;
 }
 
-@media (max-width: 800px) {
-  .producto-info {
-    flex-direction: column;
-    gap: 20px;
-  }
+.producto-caja:hover form {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.producto-caja label {
+  color: #fff;
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+
+.producto-caja form div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 15px;
+  align-items: center;
+}
+
+.producto-caja form div input[type="checkbox"],
+.producto-caja form div input[type="radio"] {
+  margin: 0;
+  justify-self: end;
+}
+
+.producto-caja form  div label {
+  margin: 0;
+  justify-self: start;
 }
 
 input[type="submit"][name="Pedidorealizado"] {
@@ -77,11 +187,24 @@ input[type="submit"][name="Pedidorealizado"] {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 input[type="submit"][name="Pedidorealizado"]:hover {
   background-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+  }
+  50% {
+    box-shadow: 0 5px 25px rgba(40, 167, 69, 0.6);
+  }
 }
 
 input[type="reset"][name="Pedidocancelado"] {
@@ -93,10 +216,11 @@ input[type="reset"][name="Pedidocancelado"] {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s;
+  margin-top: 5px;
 }
 
-input[type="reset"][name="Pedidocancelado"] {
-  background-color: #a72a28;
+input[type="reset"][name="Pedidocancelado"]:hover {
+  background-color: #8b1f1e;
 }
 
 .boton-volver {
@@ -113,3 +237,92 @@ input[type="reset"][name="Pedidocancelado"] {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+
+header {
+  background-color: #1e2222;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid #b28d16;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 70px;
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
+  margin-left: 0;
+  object-fit: contain;
+  position: static;
+  transform: none;
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #b28d16;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.header-nav a:hover {
+  color: #b28d16;
+  transform: translateY(-2px);
+}
+
+.header-nav a:hover::after {
+  width: 80%;
+}
+

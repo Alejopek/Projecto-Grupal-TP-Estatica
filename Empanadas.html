@@ -3,59 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Empanadas rotiseria</title>
+    <title>Lomito pedido</title>
     <link rel="stylesheet" href="CSS/Producto.css" />
   </head>
+
   <body>
-    <div class="boton-volver">
-      <a href="index.html" class="btn-volver">Volver al menú</a>
-    </div>
-    <form>
-      <div class="producto-info">
-        <div class="producto-caja">
-          <img src="img/EmpanadasP.jpeg" width="450" height="300" />
-          <h2>Empanadas</h2>
+    <header>
+      <div class="header-content">
+        <a href="#inicio">
+          <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
+        </a>
+        <nav class="header-nav">
+          <a href="index.html">Inicio</a>
+          <a href="index.html #productos">Productos</a>
+          <a href="index.html #ubicacion">Ubicación</a>
+          <a href="index.html #contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="producto-info">
+      <div class="producto-caja">
+        <img
+          src="img/Empanadas.png"
+          width="450"
+          height="300"
+          style="view-transition-name: vt-empanadas"
+        />
+        <h2>Empanadas</h2>
+
+        <p>Empanadas fritas de diferentes gustos</p>
+
+        <form>
           <h3>Precio c/u: $2000</h3>
-          <p>Empanadas fritas de diferentes gustos</p>
-        </div>
-
-        <div class="opciones-caja">
-          <div class="cantidadempanadas">
-            <h3>Seleccione la cantidad que desea ordenar</h3>
-            <label for="">Empanada de carne</label>
+          <h3>Seleccione la cantidad que desea ordenar</h3>
+          <div>
             <input type="number" min="0" max="30" id="Carne" name="Frita1" />
-            <br />
-            <br />
+            <label for="">Empanada de carne</label>
 
-            <label for="">Empanada de pollo</label>
             <input type="number" min="0" max="30" id="Pollo" name="Frita2" />
-            <br />
-            <br />
+            <label for="">Empanada de pollo</label>
 
-            <label for="">Empanada de jamon y queso</label>
             <input type="number" min="0" max="30" id="Jamon" name="Frita3" />
-            <br />
+            <label for="">Empanada de jamon y queso</label>
           </div>
-
-          <div class="metododepagoempanadas">
-            <h3>Ingrese un metodo de pago</h3>
+          <h3>Ingrese un metodo de pago</h3>
+          <div>
             <input type="radio" id="Efectivo" name="metodopago" />
             <label for="Efectivo">Efectivo</label>
             <input type="radio" id="Mp" name="metodopago" />
-            <label for="Mp">Mercado pago</label> <br />
-            <br />
+            <label for="Mp">Mercado pago</label>
           </div>
 
-          <div class="pedidoempanadas">
-            <input type="submit" value="Enviar pedido" name="Pedidorealizado" />
-            <input
-              type="reset"
-              value="Cancelar pedido"
-              name="Pedidocancelado"
-            />
-          </div>
-        </div>
+          <input type="submit" value="Enviar pedido" name="Pedidorealizado" />
+          <input type="reset" value="Cancelar pedido" name="Pedidocancelado" />
+        </form>
       </div>
-    </form>
+    </div>
   </body>
 </html>

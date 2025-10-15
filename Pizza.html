@@ -7,59 +7,62 @@
     <link rel="stylesheet" href="CSS/Producto.css" />
   </head>
   <body>
-    <div class="boton-volver">
-      <a href="index.html" class="btn-volver">Volver al menú</a>
-    </div>
-    <form>
-      <div class="producto-info">
-        <div class="producto-caja">
-          <img src="img/Pizza.png.jpeg" width="350" height="300" />
-          <h2>Pizza</h2>
-          <h3>Precio: $15000</h3>
-          <p>Pizza hecha con masa casera recien salida del horno</p>
-        </div>
-        <div class="opciones-caja">
-          <div class="cantidadpizza">
-            <h3>Cuantas pizzas desea ordenar</h3>
-            <input type="number" min="0" max="30" id="Pizza" name="cantidad" />
+    <header>
+      <div class="header-content">
+        <a href="#inicio">
+          <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
+        </a>
+        <nav class="header-nav">
+          <a href="index.html">Inicio</a>
+          <a href="index.html #productos">Productos</a>
+          <a href="index.html #ubicacion">Ubicación</a>
+          <a href="index.html #contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-            <h3>Elige el tipo de pizza</h3>
+    <div class="producto-info">
+      <div class="producto-caja">
+        <img
+          src="img/Pizza.png.jpeg"
+          width="350"
+          height="300"
+          style="view-transition-name: vt-pizza"
+        />
+        <h2>Pizza</h2>
+        <p>Pizza hecha con masa casera recien salida del horno</p>
+        <form>
+          <h3>Precio: $15000</h3>
+          <h3>Cuantas pizzas desea ordenar</h3>
+          <input type="number" min="0" max="30" id="Pizza" name="cantidad" />
+
+          <h3>Elige el tipo de pizza</h3>
+          <div>
             <select id="Eleccion" name="Sabor">
               <option value="mozzarella">Mozzarella</option>
               <option value="napolitana">Napolitana</option>
               <option value="especial">Especial</option>
               <option value="choclo">Choclo</option>
             </select>
-            <br />
           </div>
-          <div class="metododepagopizza">
-            <h3>Elige el metodo de pago</h3>
-            <label for="Efectivo"
-              ><input type="radio" id="Efectivo" name="metodopago" />
-              Efectivo</label
-            >
-            <label for="Mp"
-              ><input type="radio" id="Mp" name="metodopago" /> Mercado
-              pago</label
-            >
-            <br />
-          </div>
-          <br />
 
-          <div class="pedidopizza">
-            <input
-              type="submit"
-              name="Pedidorealizado"
-              value="Realizar pedido"
-            />
-            <input
-              type="reset"
-              name="Pedidocancelado"
-              value="Cancelar pedido"
-            />
-          </div>
-        </div>
+          <h3>Elige el metodo de pago</h3>
+
+          <label for="Efectivo"
+            ><input type="radio" id="Efectivo" name="metodopago" />
+            Efectivo</label
+          >
+          <label for="Mp"
+            ><input type="radio" id="Mp" name="metodopago" /> Mercado
+            pago</label
+          >
+
+          <input type="submit" name="Pedidorealizado" value="Realizar pedido" />
+          <input type="reset" name="Pedidocancelado" value="Cancelar pedido" />
+        </form>
       </div>
-    </form>
+    </div>
+    
+    <script src="JS/transitions.js"></script>
   </body>
 </html>

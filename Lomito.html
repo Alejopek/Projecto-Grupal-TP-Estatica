@@ -7,66 +7,74 @@
     <link rel="stylesheet" href="CSS/Producto.css" />
   </head>
   <body>
-    <div class="boton-volver">
-      <a href="index.html" class="btn-volver">Volver al menú</a>
-    </div>
+    <header>
+      <div class="header-content">
+        <a href="#inicio">
+          <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
+        </a>
+        <nav class="header-nav">
+          <a href="index.html">Inicio</a>
+          <a href="index.html #productos">Productos</a>
+          <a href="index.html #ubicacion">Ubicación</a>
+          <a href="index.html #contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
 
-    <form>
-      <div class="producto-info">
-        <div class="producto-caja">
-          <img src="img/lomitopng.png" width="450" height="300" />
-          <h2>Lomito</h2>
+    <div class="producto-info">
+      <div class="producto-caja">
+        <img
+          src="img/lomitopng.png"
+          width="450"
+          height="300"
+          style="view-transition-name: vt-lomito"
+        />
+        <h2>Lomito</h2>
+
+        <p>Lomito clasico con una porcion de papas fritas</p>
+        <form>
           <h3>Precio: $13000</h3>
-          <p>Lomito clasico con una porcion de papas fritas</p>
-        </div>
-        <div class="opciones-caja">
-          <div class="cantidadlomito">
-            <h3>Elige cuantos Lomitos va a ordenar</h3>
+          <h3>Elige cuantos Lomitos va a ordenar</h3>
+          <div>
             <input type="number" min="0" max="30" id="Cant" name="Cantidad" />
           </div>
-
-          <div class="tamañolomito">
-            <h3>Elige el tamaño de tu Lomito</h3>
+          <h3>Elige el tamaño de tu Lomito</h3>
+          <div>
+            <input type="radio" id="Opcion1" name="Tamaño" />
             <label for="Opcion1">Chico</label>
-            <input type="radio" id="Opcion1" name="Tamaño" /> <br />
+            <input type="radio" id="Opcion2" name="Tamaño" />
             <label for="Opcion2">Mediano</label>
-            <input type="radio" id="Opcion2" name="Tamaño" /> <br />
+            <input type="radio" id="Opcion3" name="Tamaño" />
             <label for="Opcion3">Grande</label>
-            <input type="radio" id="Opcion3" name="Tamaño" /> <br />
           </div>
-          <div class="ordenlomito">
-            <h3>Personaliza tu Lomito</h3>
+          <h3>Personaliza tu Lomito</h3>
+          <div>
+            <input type="checkbox" id="Tomate" name="Ingredientes" />
             <label for="Tomate">Tomate</label>
-            <input type="checkbox" id="Tomate" name="Ingredientes" /> <br />
+
+            <input type="checkbox" id="Lechuga" name="Ingredientes" />
             <label for="Lechuga">Lechuga</label>
-            <input type="checkbox" id="Lechuga" name="Ingredientes" /> <br />
+
+            <input type="checkbox" id="Jamon" name="Ingredientes" />
             <label for="Jamon">Jamon</label>
-            <input type="checkbox" id="Jamon" name="Ingredientes" /> <br />
+
+            <input type="checkbox" id="Queso" name="Ingredientes" />
             <label for="Queso">Queso</label>
-            <input type="checkbox" id="Queso" name="Ingredientes" /> <br />
           </div>
-          <div class="metodopagolomito">
-            <h3>Elige un metodo de pago</h3>
+          <h3>Elige un metodo de pago</h3>
+          <div>
             <input type="radio" id="Efectivo" name="metodopago" />
             <label for="Efectivo">Efectivo</label>
             <input type="radio" id="Mp" name="metodopago" />
-            <label for="Mp">Mercado pago</label> <br />
-            <br />
+            <label for="Mp">Mercado pago</label>
           </div>
-          <div class="pedidolomito">
-            <input
-              type="submit"
-              name="Pedidorealizado"
-              value="Realizar pedido"
-            />
-            <input
-              type="reset"
-              name="Pedidocancelado"
-              value="Cancelar pedido"
-            />
-          </div>
-        </div>
+
+          <input type="submit" name="Pedidorealizado" value="Realizar pedido" />
+          <input type="reset" name="Pedidocancelado" value="Cancelar pedido" />
+        </form>
       </div>
-    </form>
+    </div>
+    
+    <script src="JS/transitions.js"></script>
   </body>
 </html>

@@ -6,69 +6,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Milanesa</title>
   <link rel="stylesheet" href="CSS/Producto.css">
+  
 </head>
 
 <body>
-  <div class="boton-volver">
-    <a href="index.html" class="btn-volver">Volver al Menú</a>
-  </div>
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
+      </a>
+
+      <nav class="header-nav">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#productos">Productos</a>
+        <a href="index.html#ubicacion">Ubicación</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
   <div class="producto-info">
     <div class="producto-caja">
-      <img src="img/milanesa-a-caballo-Photoroom.png" width="350" height="350" alt="Milanesa al caballo, Con Fritas" />
+      <img src="img/milanesa-a-caballo-Photoroom.png" width="350" height="350" alt="Milanesa al caballo, Con Fritas" style="view-transition-name: vt-milanesa" />
       <h2>Milanesa al caballo, Con Fritas</h2>
       <p>
         Milanesa al caballo con huevo frito hecha al horno o fritas, con papas incluye aderezos
       </p>
-    </div>
 
-    <div class="opciones-caja">
       <form action="">
         <h3>Precio c/u: $14000</h3>
         <h3>Elige cuantas Milanesas desea ordenar</h3>
         <input type="number" min="0" max="15" id="Cant" name="Cantidad">
 
         <h3>Dejar o Sacar</h3>
-        <input type="checkbox" name="SacarAderezo" value="Aderezo" id="aderezo" />
-        <label for="aderezo">Aderezos</label><br />
+        <div>
+          <input type="checkbox" name="SacarAderezo" value="Aderezo" id="aderezo" />
+          <label for="aderezo">Aderezos</label>
 
-        <input type="checkbox" name="SacarHuevo" value="Huevo" id="huevo" />
-        <label for="huevo">Huevo</label><br />
+          <input type="checkbox" name="SacarHuevo" value="Huevo" id="huevo" />
+          <label for="huevo">Huevo</label>
 
-        <input type="checkbox" name="SacarPapas" value="Papas" id="papas" />
-        <label for="papas">Papas</label><br />
+          <input type="checkbox" name="SacarPapas" value="Papas" id="papas" />
+          <label for="papas">Papas</label>
+        </div>
 
         <h3>Que tamaño desea su pedido</h3>
-        <input type="radio" name="tamano" value="Chico" id="chico" />
-        <label for="chico">Chico</label><br />
+        <div>
+          <input type="radio" name="tamano" value="Chico" id="chico" />
+          <label for="chico">Chico</label>
 
-        <input type="radio" name="tamano" value="Mediana" id="mediana" />
-        <label for="mediana">Mediana</label><br />
+          <input type="radio" name="tamano" value="Mediana" id="mediana" />
+          <label for="mediana">Mediana</label>
 
-        <input type="radio" name="tamano" value="Grande" id="grande" />
-        <label for="grande">Grande</label><br />
+          <input type="radio" name="tamano" value="Grande" id="grande" />
+          <label for="grande">Grande</label>
+        </div>
 
         <h3>Bebida</h3>
-        <input type="radio" name="bebida" value="Coca" id="coca" />
-        <label for="coca">Coca</label><br />
+        <div>
+          <input type="radio" name="bebida" value="Coca" id="coca" />
+          <label for="coca">Coca</label>
 
-        <input type="radio" name="bebida" value="Pepsi" id="pepsi" />
-        <label for="pepsi">Pepsi</label><br />
+          <input type="radio" name="bebida" value="Pepsi" id="pepsi" />
+          <label for="pepsi">Pepsi</label>
 
-        <input type="radio" name="bebida" value="Sprite" id="sprite" />
-        <label for="sprite">Sprite</label><br />
+          <input type="radio" name="bebida" value="Sprite" id="sprite" />
+          <label for="sprite">Sprite</label>
 
-        <input type="radio" name="bebida" value="Fanta" id="fanta" />
-        <label for="fanta">Fanta</label><br />
+          <input type="radio" name="bebida" value="Fanta" id="fanta" />
+          <label for="fanta">Fanta</label>
 
-        <input type="radio" name="bebida" value="Quilmes" id="quilmes" />
-        <label for="quilmes">Quilmes</label><br />
+          <input type="radio" name="bebida" value="Quilmes" id="quilmes" />
+          <label for="quilmes">Quilmes</label>
+        </div>
 
         <h3>Elige el método de pago</h3>
-        <input type="radio" id="Efectivo" name="metodopago" value="Efectivo">
-        <label for="Efectivo">Efectivo</label>
-        <input type="radio" id="Mp" name="metodopago" value="MercadoPago">
-        <label for="Mp">Mercado pago</label> <br> <br>
+        <div>
+          <input type="radio" id="Efectivo" name="metodopago" value="Efectivo">
+          <label for="Efectivo">Efectivo</label>
+          <input type="radio" id="Mp" name="metodopago" value="MercadoPago">
+          <label for="Mp">Mercado pago</label>
+        </div>
 
         <input type="submit" name="Pedidorealizado" value="Realizar pedido">
         <input type="reset" name="Pedidocancelado" value="Cancelar pedido">

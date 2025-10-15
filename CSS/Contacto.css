@@ -2,10 +2,68 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
+
+header {
+  background-color: #1e2222;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid #b28d16;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 70px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
+  margin-left: 0;
+  object-fit: contain;
+  position: static;
+  transform: none;
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+  padding: 8px 16px;
+}
+
+.header-nav a:hover {
+  color: #b28d16;
+}
+
 
 body{
     padding: 15px;
+    margin-top: 60px;
+    background: linear-gradient(135deg, #652614 0%, #644114 20%, #573320 40%, #643314 60%, #641714 80%, #502F14 100%);
+    color: white;
 }
 
 .icono {
@@ -21,10 +79,126 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+    gap: 20px;   
+}
+
+.contact_form{  
+  width: 460px; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+input{
+  background-color: #fbfbfb; 
+  width: 408px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #ab4493; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+textarea{
+  background-color: #fbfbfb; 
+  width: 405px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #ab4493; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+label{
+  display: block; 
+  float: center;  
+}
+
+button{
+  height: 45px; 
+  padding-left: 5px;
+  padding-right: 5px;   
+  margin-bottom: 20px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: #ab4493; 
+  border-color: #ab4493; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 420px;   
+  cursor: pointer;
+}
+
+button p{
+  color: #fff; 
+}
+
+span{
+  color: #ab4493; 
+}
+
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e;  
+}
+
+h1{
+  font-size: 39px;  
+  text-align: letf; 
+  padding-bottom: 20px; 
+  color: #ab4493;
+}
+
+.formulario h3{
+  font-size: 16px; 
+  padding-bottom: 30px;
+  color: #0e0e0e; 
+}
+
+#Titulo_contacto{
+  color: white;
+}
+
+.formulario p{
+  font-size: 14px; 
+  color: #0e0e0e; 
+}
+
+::-webkit-input-placeholder {
+ color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8;
+}
+
+.formulario input:focus{
+  outline:0;
+  border: 1px solid #97d848;
+}
+
+.formulario textarea:focus{
+  outline:0;
+  border: 1px solid #97d848;
 }
 
 .icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
     position: relative;
     width: 80px;
     height: 80px;
@@ -61,5 +235,31 @@ main {
     left: 50%;
     transform: translate(-50%,-50%);
     font-size: 1.7rem;
+}
+
+.icono img {
+    display: block;
+    max-width: 60px;
+    max-height: 60px;
+    margin: auto;
+}
+
+footer {
+  background-color: #101010;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: #b28d16 2px solid;
+  margin: 0px;
+  
+}
+
+.Imagen{
+  background-color: #000000;
+  width: 100%;
+  margin: 0%;
 }
 

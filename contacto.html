@@ -1,51 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Contacto.css">
-    <link href="https://boxicons.com/icons?s=rounded&w=thin&f=false" rel="stylesheet" >
-    <title>Contacto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/Contacto.css">
+  <title>Contacto</title>
 </head>
+<header>
+  <div class="header-content">
+    <a href="#inicio">
+      <img src="img/logo.png" alt="logo" height="50" width="50" id="logo" />
+    </a>
+    <nav class="header-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
 <body>
-    <h1>Para saber mas de la rotiseria Pipa:</h1>
-    <h2>Imagen de nuestra rotiseria:</h2>
-    <img src="img/logo.png" alt="Imagen de nuestra rotiseria" title="Imagen de la rotiseria Pipa" width="550" height="550">
-     <main>
-        <div class="icono">
-            <img src="img/instagram.png" alt="Instagram" width="60" height="60"> 
-                <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
-            
-            <i class="bx bxl-instagram"></i>       
-         </div>
+  <h1 id="Titulo_contacto">Para contactarse con la Rotiseria Pipa</h1>
 
-          <div class="icono twitter">
-            <img src="img/pngegg.png" alt="Twitter (X)" width="60" height="60">
-                <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
-            
-            <i class="bx bxl-twitter"></i>       
-         </div>
+  <form action="post">
+    <div class="contact_form">
 
-          <div class="icono">
-            <img src="img/Whatsapp (2).png" alt="Whatsapp" height="60" widht="60">
-                <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
-            
-            <i class="bx bxl-Whatsapp"></i>       
-         </div>
-
-          <div class="icono">
-            <img src="img/Facebook (2).png" alt="Facebook" height="60" widht="60">
-                <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
-            
-            <i class="bx bxl-facebook-circle"></i>       
-         </div>
-    </main>
+      <div class="formulario">
+        <h1>Formulario de contacto</h1>
+        <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
 
 
-    <h3>Calle de nuestra rotiseria:</h3>
-    <p>Lanin 2020 Neuquen-Argentina</p>
-    <h3>Horarios de nuestra rotiseria:</h3>
-    <p>A la mañana de 08:00am hasta las 12:00am y a la tarde desde las 19:00pm hasta las 23:00pm</p>
-    <footer>
-    </footer>
+        <form action="submeter-formulario.php" method="post">
+
+
+          <p>
+            <label for="nombre" class="colocar_nombre">Nombre
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="text" name="introducir_nombre" id="nombre" required="obligatorio"
+              placeholder="Escribe tu nombre">
+          </p>
+
+          <p>
+            <label for="email" class="colocar_email">Email
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="email" name="introducir_email" id="email" required="obligatorio"
+              placeholder="Escribe tu Email">
+          </p>
+
+          <p>
+            <label for="telefone" class="colocar_telefono">Teléfono
+            </label>
+            <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+          </p>
+
+
+          <p>
+            <label for="asunto" class="colocar_asunto">Asunto
+              <span class="obligatorio">*</span>
+            </label>
+            <input type="text" name="introducir_asunto" id="assunto" required="obligatorio"
+              placeholder="Escribe un asunto">
+          </p>
+
+          <p>
+            <label for="mensaje" class="colocar_mensaje">Mensaje
+              <span class="obligatorio">*</span>
+            </label>
+            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio"
+              placeholder="Deja aquí tu comentario..."></textarea>
+          </p>
+
+          <button type="submit" name="enviar_formulario" id="enviar">
+            <p>Enviar</p>
+          </button>
+
+          <p class="aviso">
+            <span class="obligatorio"> * </span>los campos son obligatorios.
+          </p>
+
+        </form>
+      </div>
+    </div>
+
+  </form>
+  <div class="Imagen">
+
+  <h2>Imagen de nuestra rotiseria:</h2>
+  <img src="img/logo.png" alt="Imagen de nuestra rotiseria" title="Imagen de la rotiseria Pipa" width="200"
+    height="200">
+  <h3>Calle de nuestra rotiseria:</h3>
+  <p>Lanin 2020 Neuquen-Argentina</p>
+  <h3>Horarios de nuestra rotiseria:</h3>
+  <p>A la mañana de 08:00am hasta las 12:00am y a la tarde desde las 19:00pm hasta las 23:00pm</p>
+  <main>
+    <div class="icono">
+      <img src="img/instagram.png" alt="Instagram" width="60" height="60">
+      <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
+
+      <i class="bx bxl-instagram"></i>
+    </div>
+
+    <div class="icono twitter">
+      <img src="img/pngegg.png" alt="Twitter (X)" width="60" height="60">
+      <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
+
+      <i class="bx bxl-twitter"></i>
+    </div>
+
+    <div class="icono">
+      <img src="img/Whatsapp (2).png" alt="Whatsapp" height="60" widht="60">
+      <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
+
+      <i class="bx bxl-Whatsapp"></i>
+    </div>
+
+    <div class="icono">
+      <img src="img/Facebook (2).png" alt="Facebook" height="60" widht="60">
+      <circle cx="40" cy="40" r="35" stroke="black" stroke-widht="4" fill="none"></circle>
+
+      <i class="bx bxl-facebook-circle"></i>
+    </div>
+  </main>
+  </div>
+</body>
+<footer>
+  <h2>Derechos reservados ® EPET 20</h2>
+</footer>
 </html>

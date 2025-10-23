@@ -19,6 +19,7 @@
     width: 100%;
     margin: 0 auto 2rem;
     padding: 0 15px;
+    position: relative;
 }
 
 .carousel .card {
@@ -70,6 +71,12 @@
 .carousel .row {
     margin: 0 auto;
     max-width: 1400px;
+}
+
+.carousel .carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
 .carousel-item .row {
@@ -125,4 +132,116 @@
     transition: all 0.3s ease;
     border: 2px solid #b28d16;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#menuCarousel.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+#menuCarousel .carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+#menuCarousel .carousel-item {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#menuCarousel .carousel-item.active {
+  display: block;
+  opacity: 1;
+}
+
+#menuCarousel .row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#menuCarousel .col-md-4 {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 220px;
+}
+
+#menuCarousel .card {
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+#menuCarousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+#menuCarousel .carousel-control-prev,
+#menuCarousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  cursor: pointer;
+  border: none;
+}
+
+#menuCarousel .carousel-control-prev { left: 10px; }
+#menuCarousel .carousel-control-next { right: 10px; }
+
+#menuCarousel .carousel-control-prev-icon,
+#menuCarousel .carousel-control-next-icon {
+  background: none;
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+}
+
+#menuCarousel .carousel-control-prev-icon::before { content: '‹'; color: #fff; font-weight: 700; }
+#menuCarousel .carousel-control-next-icon::before { content: '›'; color: #fff; font-weight: 700; }
+
+@media (max-width: 700px) {
+  #menuCarousel .col-md-4 { flex: 1 1 100%; min-width: 0; }
+  #menuCarousel .carousel-control-prev,
+  #menuCarousel .carousel-control-next { width: 36px; height: 36px; }
+}
+
+#menuCarousel .carousel-item .row { justify-content: center; }
+
+#productos,
+section.productos {
+  background: #ffffff;
+  color: #222;
+  padding: 1.25rem 0;
+}
+
+#menuCarousel {
+  background: transparent;
+}
+
+.btn-reseña {
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.12);
+  color: #fff;
+  border-color: #b28d16;
+  background-color: #b28d16;
 }

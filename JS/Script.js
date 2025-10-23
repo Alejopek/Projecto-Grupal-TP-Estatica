@@ -1,90 +1,105 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-	const carousel = document.getElementById('menuCarousel');
+const carousel = document.getElementById('menuCarousel');
 
-	if (!carousel) return;
+if (!carousel) return;
 
-	const items = Array.from(carousel.querySelectorAll('.carousel-item'));
+const items = Array.from(carousel.querySelectorAll('.carousel-item'));
 
-	const prevBtn = carousel.querySelector('.carousel-control-prev');
-	const nextBtn = carousel.querySelector('.carousel-control-next');
+if (items.length === 0) return;
 
-	let current = items.findIndex(i => i.classList.contains('active'));
-	if (current === -1) current = 0; 
+const prevBtn = carousel.querySelector('.carousel-control-prev');
+const nextBtn = carousel.querySelector('.carousel-control-next');
 
-	const interval = 5000;
-	
-	const wrap = true;
+let current = items.findIndex(i => i.classList.contains('active'));
+if (current === -1) current = 0;
 
-	let timer = null;
+const interval = 5000;
 
-	function show(index) {
-		if (index < 0) index = wrap ? items.length - 1 : 0;
-		if (index >= items.length) index = wrap ? 0 : items.length - 1;
+const wrap = true;
 
-		items.forEach((el, i) => {
-			el.classList.toggle('active', i === index);
-		});
-		current = index;
+let timer = null;
+
+function show(index) {
+if (index < 0) index = wrap ? items.length - 1 : 0;
+if (index >= items.length) index = wrap ? 0 : items.length - 1;
+
+items.forEach((el, i) => {
+el.classList.toggle('active', i === index);
+});
+
+current = index;
+
+}
+
+function next() {
+show(current + 1);
+restartTimer();
+}
+
+function prev() {
+show(current - 1);
+restartTimer();
+}
+
+function startTimer() {
+if (interval > 0) {
+timer = setInterval(() => { show(current + 1); }, interval);
 	}
+}
 
-	function next() {
-		show(current + 1);
-		restartTimer();
+function stopTimer() {
+if (timer) { clearInterval(timer); timer = null; 
 	}
+}
 
-	function prev() {
-		show(current - 1);
-		restartTimer();
-	}
-	
-	function startTimer() {
-		if (interval > 0) {
-			timer = setInterval(() => { show(current + 1); }, interval);
-		}
-	}
+function restartTimer() {
+stopTimer();
+startTimer();
+}
 
-	function stopTimer() {
-		if (timer) { clearInterval(timer); timer = null; }
-	}
+if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); next(); });
+if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); prev(); });
 
-	function restartTimer() {
-		stopTimer();
-		startTimer();
-	}
+document.addEventListener('keydown', (e) => {
 
-	if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); next(); });
-	if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); prev(); });
+if (!document.body.contains(carousel)) return;
+if (e.key === 'ArrowRight') next();
+if (e.key === 'ArrowLeft') prev();
+});
 
-	document.addEventListener('keydown', (e) => {
-		if (!document.body.contains(carousel)) return;
-		if (e.key === 'ArrowRight') next();
-		if (e.key === 'ArrowLeft') prev();
-	});
+let startX = 0;
+let isTouch = false;
+carousel.addEventListener('touchstart', (e) => {
+isTouch = true;
+startX = e.touches[0].clientX;
 
-	let startX = 0;
-	let isTouch = false;
-	carousel.addEventListener('touchstart', (e) => {
-		isTouch = true;
-		startX = e.touches[0].clientX;
-		stopTimer();
-	}, { passive: true });
+stopTimer();
+}, { passive: true });
 
-	carousel.addEventListener('touchmove', (e) => {
-		if (!isTouch) return;
-	}, { passive: true });
+carousel.addEventListener('touchmove', (e) => {
+if (!isTouch) return;
 
-	carousel.addEventListener('touchend', (e) => {
-		if (!isTouch) return;
-		const endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : startX;
-		const diff = endX - startX;
-		if (Math.abs(diff) > 30) {
-			if (diff < 0) next(); else prev();
-		}
-		isTouch = false;
-		restartTimer();
-	});
+}, { passive: true });
 
-	show(current);
-	startTimer();
+carousel.addEventListener('touchend', (e) => {
+if (!isTouch) return;
+
+const endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : startX;
+
+const diff = endX - startX;
+
+if (Math.abs(diff) > 30) {
+if (diff < 0) next(); else prev();
+}
+
+isTouch = false;
+
+restartTimer();
+});
+
+show(current);
+
+startTimer();
+
 });

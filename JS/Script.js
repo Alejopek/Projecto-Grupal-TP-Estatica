@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const Cancelado = document.getElementById("Cancelado");
 
         Realizado.addEventListener("click", (evento) => {
+          alert('Envío realizado con éxito')
           evento.preventDefault();
           Enviar.textContent = " Su envío se realizo correctamente";
           console.log("Envío realizado con éxito");
@@ -117,9 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         Cancelado.addEventListener("click", (evento) => {
+          alert('Pedido cancelado')
           evento.preventDefault();
           Enviar.textContent = "Envío cancelado por el usuario";
-          console.warn("Pedido cancelado ");
+          console.warn("Pedido cancelado");
         });
       });
+
+
+      
 

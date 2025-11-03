@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Milanesa</title>
   <link rel="stylesheet" href="CSS/Producto.css">
-  
 </head>
 
 <body>
@@ -87,11 +86,12 @@
           <input type="radio" id="Mp" name="metodopago" value="MercadoPago">
           <label for="Mp">Mercado pago</label>
         </div>
-
-        <input type="submit" name="Pedidorealizado" value="Realizar pedido">
-        <input type="reset" name="Pedidocancelado" value="Cancelar pedido">
+          <input type="submit" id="Realizado" value="Enviar pedido" name="Pedidorealizado" />
+          <input type="reset" id="Cancelado" value="Cancelar pedido" name="Pedidocancelado" />
+          <div id="Enviar"></div>
       </form>
     </div>
   </div>
+  <script src="JS/Script.js"></script>
 </body>
 </html>
